@@ -1,0 +1,182 @@
+/*Imports*/
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
+
+/*Background Images*/
+
+.bg1 {
+    width: 1366px;
+    height: 768px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/img5.jpg);
+    transform: scale(1.4);
+}
+.bg2 {
+    width: 1366px;
+    transform: translate(263px, 310px);
+}
+.bg3 {
+    width: 557px;
+    height: 85px;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/img8.jpg);
+    transform: scale(3.5);
+}
+.bg4 {
+    width: 200px;
+    transform: translate(650px, -800px);
+}
+
+/*Icons*/
+
+#icon1 {
+    position: absolute;
+    color: rgb(219, 217, 217);
+    font-size: 70px;
+    transform: translate(100px, -734px);
+    animation-name: anim1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    visibility: hidden;
+    
+}
+#icon2 {
+    position: absolute;
+    font-size: 50px;
+    transform: translate(895px, -450px);
+    color: rgb(170, 170, 170);
+    animation-name: anim2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+/*Objects*/
+
+.obj1 {
+    position: absolute;
+    width: 2000px;
+    height: 10px;
+    background: black;
+    transform: translate(-97px, -700px);
+}
+
+/*Texts*/
+
+.text1 {
+    position: absolute;
+    transform: translate(730px, -830px);
+    font-family: 'Merienda', cursive;
+    color: rgb(219, 217, 217);
+    letter-spacing: 2px;
+    border: 3px solid rgb(117, 117, 117);
+    width: 350px;
+    text-align: center;
+    border-radius: 10px;
+    animation-name: anim1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.text2 {
+    position: absolute;
+    transform: translate(740px, -600px);
+    letter-spacing: 3px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 50px;
+    color: rgb(233, 232, 232);
+}
+
+/*Functions*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.slidershow {
+    border: 3px solid black;
+    width: 1000px;
+    height: 640px;
+    overflow: hidden;
+}
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51%, 3%);
+}
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+.bar {
+    border-radius: 50px;
+    width: 65px;
+    height: 15px;
+    border: 3px solid rgb(255, 255, 255);
+    margin: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.bar:hover {
+    background: rgb(223, 223, 223);
+}
+.slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+.slide {
+    width: 20%;
+    transition: 0.6s;
+}
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+#r1:checked ~ .s1 {
+    margin-left: 0%;
+}
+#r2:checked ~ .s1 {
+    margin-left: -20%;
+}
+#r3:checked ~ .s1 {
+    margin-left: -40%;
+}
+#r4:checked ~ .s1 {
+    margin-left: -60%;
+}
+
+/*Keyframes*/
+
+@keyframes anim1 {
+    0% {
+        color: rgb(219, 217, 217);
+    }
+    50% {
+        color: rgb(49, 49, 49);
+    }
+    100% {
+        color: rgb(219, 217, 217);
+    }
+}
+@keyframes anim2 {
+    0% {
+        transform: translate(895px, -450px);
+    }
+    50% {
+        transform: translate(895px, -437px);
+    }
+    100% {
+        transform: translate(895px, -450px);
+    }
+}
